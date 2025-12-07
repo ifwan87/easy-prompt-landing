@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>EasyPrompt — Master AI Instructions</title>
+    <meta
+      name="description"
+      content="Transform your AI prompts into high-performing instructions. Analyze and optimize for ChatGPT, Claude, and Gemini."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              geist: ['Geist', 'sans-serif'],
+              mono: ['Geist Mono', 'monospace'],
+              inter: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'fade-slide-in': 'fadeSlideIn 0.8s ease-out forwards',
+            },
+            keyframes: {
+              fadeSlideIn: {
+                '0%': { opacity: '0', transform: 'translateY(20px)', filter: 'blur(4px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)', filter: 'blur(0px)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Scrollbar Hiding */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Glow Effects */
+      .glow-text {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+      }
+
+      /* Animation Utility classes */
+      .animate-on-scroll {
+        opacity: 0;
+        animation-play-state: paused;
+      }
+      .animate-on-scroll.animate {
+        animation: fadeSlideIn 0.8s ease-out forwards;
+        animation-play-state: running;
+      }
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
+      .delay-400 { animation-delay: 0.4s; }
+
+      @keyframes fadeSlideIn {
+        0% { opacity: 0; transform: translateY(20px); filter: blur(4px); }
+        100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@^19.2.1/client",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.2.1",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased h-full overflow-hidden font-geist selection:bg-indigo-500/30 selection:text-indigo-200 text-white">
+    
+    <!-- Base Background Color (Separate layer to ensure Aura visibility) -->
+    <div class="fixed inset-0 bg-black -z-50"></div>
+
+    <!-- Background (component) added by Aura -->
+    <div class="aura-background-component fixed top-0 w-full h-screen -z-10" data-alpha-mask="80" style="mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent); -webkit-mask-image: linear-gradient(to bottom, transparent, black 0%, black 80%, transparent)">
+      <div class="aura-background-component top-0 w-full -z-10 absolute h-full">
+        <div data-us-project="vTTCp5g4cVl9nwjlT56Z" class="absolute w-full h-full left-0 top-0 -z-10"></div>
+        <script type="text/javascript">
+          !function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.29/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();
+        </script>
+      </div>
+    </div>
+
+    <!-- Background Ambient Mesh -->
+    <div class="fixed inset-0 z-[-1] pointer-events-none">
+        <div class="absolute top-[-10%] left-[20%] w-[500px] h-[500px] rounded-full blur-[120px] opacity-40 mix-blend-screen animate-pulse bg-indigo-600/20"></div>
+        <div class="absolute bottom-[-10%] right-[20%] w-[600px] h-[600px] rounded-full blur-[120px] opacity-30 mix-blend-screen bg-violet-600/10"></div>
+        <div class="absolute top-[40%] left-[50%] transform -translate-x-1/2 w-[800px] h-[400px] rounded-full blur-[100px] opacity-20 bg-slate-800/20"></div>
+    </div>
+
+    <div id="root" class="h-full relative z-0"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
