@@ -1,16 +1,16 @@
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import AppPage from './pages/AppPage';
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/app" element={<AppPage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
